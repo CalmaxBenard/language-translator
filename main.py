@@ -55,11 +55,11 @@ text_output = Text(frame, width=20, height=7, borderwidth=5, relief=RIDGE, font=
 text_output.place(x=300, y=100)
 
 # Define control buttons
-btn1 = Button(frame, text="Translate", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
+btn1 = Button(frame, command=translate, text="Translate", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
               bg="#248aa2", fg="white", cursor="hand2")
 btn1.place(x=185, y=300)
 
-btn2 = Button(frame, text="Clear", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
+btn2 = Button(frame, command=clear, text="Clear", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
               bg="#248aa2", fg="white", cursor="hand2")
 btn2.place(x=300, y=300)
 
