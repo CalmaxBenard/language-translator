@@ -1,5 +1,6 @@
 # Import libraries
-from tkinter import Tk, Frame, messagebox, ttk, RIDGE, Label, Text
+from tkinter import *
+from tkinter import messagebox, ttk
 from googletrans import Translator
 
 # Screen setup
@@ -20,6 +21,11 @@ text_input.place(x=10, y=100)
 
 text_output = Text(frame, width=20, height=7, borderwidth=5, relief=RIDGE, font=("verdana", 15))
 text_output.place(x=300, y=100)
+
+# Define control buttons
+btn1 = Button(frame, text="Translate", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
+              bg="#248aa2", fg="white", cursor="hand2")
+btn1.place(x=185, y=300)
 
 
 root.mainloop()
