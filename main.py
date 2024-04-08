@@ -25,6 +25,18 @@ def translate():
         output = translator.translate(lang, dest=chosen_lang)
         text_output.insert("end", output.text)
 
+# clear function
+def clear():
+    text_input.delete(1.0, "end")
+    text_output.delete(1.0, "end")
+
+# Add selection mode for text entry
+a = StringVar()
+auto_select = ttk.Combobox(frame, width=27, textvariable=a, state="randomly", font=("verdana", 10, "bold"))
+auto_select["values"] = "Auto Select"
+auto_select.place(x=15, y=60)
+auto_select.current(0)
+
 # Set title/label on screen
 Label(root, text="Language Translator", font=("Helvetica", 20, "bold"), fg="black", bg="#F7DC6F").pack(pady=10)
 
