@@ -1,7 +1,7 @@
 # Import libraries
 from tkinter import *
 from tkinter import messagebox, ttk
-from googletrans import Translator
+from googletrans import Translator, LANGUAGES
 
 # Screen setup
 root = Tk()
@@ -36,6 +36,13 @@ auto_select = ttk.Combobox(frame, width=27, textvariable=a, state="randomly", fo
 auto_select["values"] = "Auto Select"
 auto_select.place(x=15, y=60)
 auto_select.current(0)
+
+# Add language selection method
+language = StringVar()
+choose_language = ttk.Combobox(frame, width=27, textvariable=language, state="randomly", font=("verdana", 10, "bold"))
+choose_language["values"] = list(LANGUAGES.values())
+choose_language.place(x=300, y=60)
+choose_language.current(0)
 
 # Set title/label on screen
 Label(root, text="Language Translator", font=("Helvetica", 20, "bold"), fg="black", bg="#F7DC6F").pack(pady=10)
