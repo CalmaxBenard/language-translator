@@ -12,6 +12,7 @@ root.geometry("590x370")
 frame = Frame(root, width=590, height=370, relief=RIDGE, borderwidth=5, bg="#F7DC6F")
 frame.place(x=0, y=0)
 
+
 # translate function
 def translate():
     lang = text_input.get(1.0, "end")
@@ -25,10 +26,12 @@ def translate():
         output = translator.translate(lang, dest=chosen_lang)
         text_output.insert("end", output.text)
 
+
 # clear function
 def clear():
     text_input.delete(1.0, "end")
     text_output.delete(1.0, "end")
+
 
 # Add selection mode for text entry
 a = StringVar()
@@ -63,7 +66,4 @@ btn2 = Button(frame, command=clear, text="Clear", relief=RAISED, borderwidth=2, 
               bg="#248aa2", fg="white", cursor="hand2")
 btn2.place(x=300, y=300)
 
-
 root.mainloop()
-
-
