@@ -57,13 +57,3 @@ class LanguageTranslator:
     def clear(self):
         self.text_input.delete(1.0, "end")
         self.text_output.delete(1.0, "end")
-
-
-def main():
-    root = Tk()
-    app = LanguageTranslator(root)
-    root.mainloop()
-
-
-if __name__ == "__main__":
-    main()
