@@ -27,6 +27,10 @@ btn1 = Button(frame, text="Translate", relief=RAISED, borderwidth=2, font=("verd
               bg="#248aa2", fg="white", cursor="hand2")
 btn1.place(x=185, y=300)
 
+btn2 = Button(frame, text="Clear", relief=RAISED, borderwidth=2, font=("verdana", 10, "bold"),
+              bg="#248aa2", fg="white", cursor="hand2")
+btn2.place(x=300, y=300)
+
 
 root.mainloop()
 
