@@ -14,8 +14,12 @@ frame.place(x=0, y=0)
 # Set title/label on screen
 Label(root, text="Language Translator", font=("Helvetica", 20, "bold"), fg="black", bg="#F7DC6F").pack(pady=10)
 
+# Define text boxes
 text_input = Text(frame, width=20, height=7, borderwidth=5, relief=RIDGE, font=("verdana", 15))
 text_input.place(x=10, y=100)
+
+text_output = Text(frame, width=20, height=7, borderwidth=5, relief=RIDGE, font=("verdana", 15))
+text_output.place(x=300, y=100)
 
 
 root.mainloop()
