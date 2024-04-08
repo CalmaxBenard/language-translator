@@ -12,6 +12,19 @@ root.geometry("590x370")
 frame = Frame(root, width=590, height=370, relief=RIDGE, borderwidth=5, bg="#F7DC6F")
 frame.place(x=0, y=0)
 
+# translate function
+def translate():
+    lang = text_input.get(1.0, "end")
+    chosen_lang = choose_language.get()
+
+    if lang == "":
+        messagebox.showerror("Language Translator", "Enter the text to translate!")
+    else:
+        text_output.delete(1.0, "end")
+        translator = Translator()
+        output = translator.translate(lang, dest=chosen_lang)
+        text_output.insert("end", output.text)
+
 # Set title/label on screen
 Label(root, text="Language Translator", font=("Helvetica", 20, "bold"), fg="black", bg="#F7DC6F").pack(pady=10)
 
